@@ -1,0 +1,14 @@
+body {
+    background-color: #ffa185;
+}
+
+#Topper {
+    width: 128px;
+    padding: 1em;
+    background-color: #7e7c7c;
+    border-radius: 50px;
+}
+
+#Topper img {
+    margin-top: 0.5em;
+}
