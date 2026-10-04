@@ -12,3 +12,83 @@ body {
 #Topper img {
     margin-top: 0.5em;
 }
+
+#AccountControl {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+
+#AccountMenu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: 20rem;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 5rem);
+    padding: 0.75rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #7e7c7c;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+#AccountMenu[hidden] {
+    display: none;
+}
+
+#AccountMenu form,
+#AccountDetails {
+    display: grid;
+    gap: 0.5rem;
+}
+
+#AccountMenu form[hidden],
+#AccountDetails[hidden] {
+    display: none;
+}
+
+#AccountMenu label {
+    font-size: 0.875rem;
+}
+
+#AccountMenu input {
+    width: 100%;
+    min-height: 2.25rem;
+    padding: 0.4rem 0.5rem;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+#AccountMenu button {
+    min-height: 2.25rem;
+}
+
+#ProfilePic {
+    max-width: min(18rem, calc(100vw - 2rem));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#AccountRegistrationActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#AccountRegistrationActions button {
+    flex: 1;
+}
+
+#RegistrationPrompt,
+#SignedInMessage {
+    margin: 0 0 0.25rem;
+}
+
+#AccountStatus {
+    margin: 0.75rem 0 0;
+}
