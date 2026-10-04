@@ -10,7 +10,32 @@
     <main>
       <div id="Topper">
         <img src="deloitte.svg"/>
-        <button id="ProfilePic">login</button>
+        <div id="AccountControl">
+          <button id="ProfilePic" type="button" aria-controls="AccountMenu" aria-expanded="false">Login</button>
+          <div id="AccountMenu" role="region" aria-label="Account details" hidden>
+            <form id="AccountNameForm">
+              <label for="AccountName">Choose a name</label>
+              <input id="AccountName" name="name" type="text" autocomplete="nickname" maxlength="40" required />
+              <button id="AccountContinue" type="submit">Continue</button>
+            </form>
+            <form id="AccountRegistrationForm" hidden>
+              <p id="RegistrationPrompt"></p>
+              <label for="FullName">Full name</label>
+              <input id="FullName" name="fullName" type="text" autocomplete="name" maxlength="100" required />
+              <label for="AccountEmail">Email</label>
+              <input id="AccountEmail" name="email" type="email" autocomplete="email" maxlength="254" required />
+              <div id="AccountRegistrationActions">
+                <button type="submit">Create account</button>
+                <button id="BackToName" type="button">Back</button>
+              </div>
+            </form>
+            <div id="AccountDetails" hidden>
+              <p id="SignedInMessage"></p>
+              <button id="SignOutButton" type="button">Sign out</button>
+            </div>
+            <p id="AccountStatus" role="status" aria-live="polite"></p>
+          </div>
+        </div>
       </div>
       <div id="menu">
         <button id="NewChat"></button>
@@ -19,6 +44,6 @@
         </div>
       </div>
     </main>
+    <script src="script.js" defer></script>
   </body>
-  <script href="script.js"></script>
 </html>
